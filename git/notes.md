@@ -1,4 +1,4 @@
-Notes on GIT
+[Notes](Notes) on GIT
 ========================================
 
 Author: Marco
@@ -179,6 +179,24 @@ def main():
 - This is also why modular code is important. If you can just add another feature without having to change anything or very much in the main code than it's easy to collaborate!
 - `git merge --continue`
 - `git log --all --graph --decorate --oneline`
+
+Other Usefull Commands
+----------------------------------------
+- `git add -p animal.py` to stage only some changes in the file
+- then `git diff --cached`
+- then `git commit`, `git checkout animal.py` to commit and throw away the changes we didn't take
+
+- `git blame` who edited a file
+- `git show <hash>` to show the commit diff for this commit (I think)
+
+- `git stash` reverts working directory to last commit
+- `git stash pop` will undo the stash
+
+- `git bisect` manually search history. At one point did this test stop working? Complicated stuff.
+
+- `.gitignore` to ignore e.g. `.DS_Store` (Mac) or other stuff (helper stuff in LaTeX)
+
+- Try the [Pro Git](https://git-scm.com/book/en/v2) book
 
 Git Remotes
 ----------------------------------------
