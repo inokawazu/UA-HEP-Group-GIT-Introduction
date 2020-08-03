@@ -4,6 +4,9 @@ Notes on GIT
 Author: Marco
 
 Some notes on git while listening to the lecture [Version Control (git)](https://www.youtube.com/watch?v=2sjqTHE0zok).
+There is also a good [tutorial](https://missing.csail.mit.edu/2020/version-control/) by the same guy I think.
+I stole some stuff from there!
+
 
 Start Intro
 ----------------------------------------
@@ -17,16 +20,28 @@ Start Intro
 	- git
 - what about git and github?
 	- git is the underlying stuff and github is a server that you sinc your git stuff to
+	- github is a repository host for git
 	- git to github is like porn to pornhub
+	- git is independent of github. You can use it without any internet and there are also other hosters like gitlab or it's also not too hard to host it yourself on some server.
 - you track some specific folder (and its subfolders and files) with git
+- Draw
+```<root> (tree)
+|
++- foo (tree)
+|  |
+|  + bar.txt (blob, contents = "hello world")
+|
++- baz.txt (blob, contents = "git is wonderful")
+```
+- Explanation
 	- "tree" = folder
 	- "blob" = file
 	- not the whole folder is saved every time you save, but it just tracks the changes of the files!
 	- Each snapshot has a parent and changes
 	- each blob/tree/commit has a *hash* (`sha1`, 40chars)
 	- "Objects are addressed by their hash"
-- references: map from string to string: `fixEncodingBug -> hash`
-	- human readable strings to refer to the hashes
+- Modelling the history
+	- Draw the diagram of the history
 First Example
 ----------------------------------------
 
@@ -37,8 +52,17 @@ First Example
 - `git commit`
 - show hashes with git log
 - can show hashes with `git cat-file -p hash`. E.g. go to a commit, then the tree and there the blob.
+- right now I am only showing git, not github
 
-Second Example
+
+References
+----------------------------------------
+- references: map from string to string: `fixEncodingBug -> hash`
+	- human readable strings to refer to the hashes
+- `master` is a pointer ("reference") to the commit with some hash
+- `HEAD` is where you are currently looking right now
+-
+Continue first example Example
 ----------------------------------------
 Just go on with the first example.
 Draw the tree while going through this example
@@ -47,6 +71,17 @@ Draw the tree while going through this example
 - `git status`
 - modify `hello.txt`
 - `git add hello.txt`
+- `git diff`
 - commit, explain commit, explain that good commit messages are important
 - show the hash of the commit
 - `git log`
+- `git commit -a` commits all changes to all files that are already tracked by git
+- but often you don't want to commit everything at once. Reasons for that are
+	- Don't want too much changes in one commit
+- better: `git log --al --graph --decorate`
+
+Moving around in the version history
+----------------------------------------
+- `git checkout ...` check out previous commit, show that files have changed
+- show `git log --all --graph --decorate`` again to see where we are in the graph
+- `git checkout master` to go back to the top of the graph
