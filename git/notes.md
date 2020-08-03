@@ -136,7 +136,7 @@ def main():
 - show `git diff`
 - run `python animals cat`
 - add, commit, show log
-- also try `git log --all --graph --decorate --online
+- also try `git log --all --graph --decorate --oneline`
 - show `git checkout master` (cat stuff gone)
 - create dog branch `git checkout -b dog`
 ```python
@@ -152,3 +152,34 @@ def main():
 		defailt
 ```
 - show git diff
+- git add, commit
+- `git log --all --graph --decorate --oneline` to see branches
+
+Mergin and Merge Conflicts
+----------------------------------------
+- Merge and branch are kind of opposites
+- `git checkout master`
+- `git merge cat`
+- `git log`
+- `git merge dog` --> Merge conflict! (in the main function)
+- can `git merge --abort`
+- `git mergetool` or manually look at the `animal.py`
+	- if you manually look at it there is going to be `<<<<<<<<<<<<<<`, `=============` and `>>>>>>>>>>>> dog` in there
+	- just fix this stuff
+```python
+def main():
+	if sys.argv [1] == 'cat':
+		cat()
+	elif sys.argv[1] == 'dog':
+		dog()
+	else:
+		default()
+```
+- In this example the merge was easy. Usually one should not work on the same part of the code at the same time.
+- This is also why modular code is important. If you can just add another feature without having to change anything or very much in the main code than it's easy to collaborate!
+- `git merge --continue`
+- `git log --all --graph --decorate --oneline`
+
+Git Remotes
+----------------------------------------
+- Markus
