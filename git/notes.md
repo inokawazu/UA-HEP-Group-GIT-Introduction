@@ -15,7 +15,7 @@ Start Intro
 - git is rather complicated and it's maybe not the best to learn git top-down (just learn some commands), but bottom-up, learn git and the data model and then the commands
 - what is version control?
 	- worst version: Manual version control: Save file, send to collegues etc
-	- a bit better: stuff like dropbox
+	- a bit better: stuff like dropbox (DON'T USE GIT WITH DROPBOX)
 	- best: overleaf (since can work simultaniously), but it's on a special server etc and does not work for mathematica stuff. Also cannot really try to implement a new feature and maybe just throw it away if you don't like it or give up.
 	- git
 - what about git and github?
@@ -80,8 +80,75 @@ Draw the tree while going through this example
 	- Don't want too much changes in one commit
 - better: `git log --al --graph --decorate`
 
+BREAK: Show Attractor Project git
+----------------------------------------
+For the others to see how this will look for a project
+
 Moving around in the version history
 ----------------------------------------
 - `git checkout ...` check out previous commit, show that files have changed
 - show `git log --all --graph --decorate`` again to see where we are in the graph
 - `git checkout master` to go back to the top of the graph
+- show what happens if you modify `hello.txt` and then try to `git checkout`
+- `git checkout -f`, but BE CAREFUL! Whenever you say anything with `-f` you should really know what you are doing
+- `git diff` gives a diff with respect to `HEAD`
+- `git diff hash hello.txt` for how it has changed with respect to that hash
+- `git diff hash1 hash2 hello.txt` compare two commits
+- have `hello.txt` modified --> `git checkout hello.txt` throws away changes in `hello.txt`
+
+Little Python Example: `Animal.py`
+----------------------------------------
+To show how one works in a project (commits) and how branching and merging works.
+I am not sure if this is too much and we should focus on Markus' Mathematica Example
+```python
+def default():
+	print("Hello")
+
+def main():
+	default()
+
+if __name__ == '__main__':
+	main()
+```
+- `python animal.py`
+- `git status`
+- `git add`
+- `git commit` write good commit messages!
+
+Git Branches
+----------------------------------------
+- `git branch cat` creates branch `cat`
+- `git checkout cat` switches to branch `cat`
+- could also have done `git checkout -b cat` for both in one command
+- add cat function
+```python
+def cat():
+	print('Meow!')
+```
+- and in main:
+```python
+def main():
+	if sys.argv[1] == 'cat':
+		cat()
+	else:
+		default()
+```
+- show `git diff`
+- run `python animals cat`
+- add, commit, show log
+- also try `git log --all --graph --decorate --online
+- show `git checkout master` (cat stuff gone)
+- create dog branch `git checkout -b dog`
+```python
+def dog():
+	print('Woof!')
+```
+- and in main change it to
+```python
+def main():
+	if sys.argv[1] == 'dog'
+		dog()
+	else:
+		defailt
+```
+- show git diff
