@@ -181,7 +181,7 @@ def main():
 - `git merge --continue`
 - `git log --all --graph --decorate --oneline`
 
-Other Usefull Commands
+Other Useful Commands
 ----------------------------------------
 - `git add -p animal.py` to stage only some changes in the file
 - then `git diff --cached`
