@@ -25,7 +25,8 @@ Start Intro
 	- git is independent of github. You can use it without any internet and there are also other hosters like gitlab or it's also not too hard to host it yourself on some server.
 - you track some specific folder (and its subfolders and files) with git
 - Draw
-```<root> (tree)
+```
+<root> (tree)
 |
 +- foo (tree)
 |  |
