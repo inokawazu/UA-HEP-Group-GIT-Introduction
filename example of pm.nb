@@ -1,0 +1,63 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1530,         53]
+NotebookOptionsPosition[      1089,         38]
+NotebookOutlinePosition[      1489,         54]
+CellTagsIndexPosition[      1446,         51]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["This is an example of pm", "Text",
+ CellChangeTimes->{{3.8058169397782483`*^9, 
+  3.8058169469775496`*^9}},ExpressionUUID->"7305ecf3-6216-4bd0-9169-\
+85436f853588"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"-", "b"}], "\[PlusMinus]", 
+    RowBox[{"Sqrt", "[", 
+     RowBox[{
+      RowBox[{"b", "^", "2"}], "-", 
+      RowBox[{"4", " ", "a", " ", "c"}]}], "]"}]}], ")"}], "/", 
+  RowBox[{"(", 
+   RowBox[{"2", " ", "a"}], ")"}]}]], "Input",ExpressionUUID->"79eb82e2-9027-\
+4ab7-949d-66fcac966a8e"]
+},
+WindowSize->{776, 872},
+WindowMargins->{{Automatic, 415}, {Automatic, 47}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (March 14, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"ec7d7eb5-5809-4ded-9734-6d1f06de2905"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 170, 3, 34, "Text",ExpressionUUID->"7305ecf3-6216-4bd0-9169-85436f853588"],
+Cell[731, 25, 354, 11, 28, "Input",ExpressionUUID->"79eb82e2-9027-4ab7-949d-66fcac966a8e"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
